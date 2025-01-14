@@ -10,7 +10,7 @@ class Solution {
       $number = implode("",$digits) + 1;
       $array= [];
       for($i = 0 ; $i< strlen($number); $i++){
-        $array[] = $number[$i];
+        $array[] = (int)$number[$i];
       }
       return $array;
     }
