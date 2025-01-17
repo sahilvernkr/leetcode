@@ -6,20 +6,14 @@ class Solution {
      * @return String
      */
     function longestCommonPrefix($strs) {
-        $counter = "";
-        $string = str_split($strs[0]);
-        foreach($string as $check){
-            for($i=1; $i<count($strs);$i++){
-               $str = str_split($strs[$i]);
-               foreach($str as $st){
-                if($st == $check){
-                $counter .= $st;
-                }
-                break;
-               }
-            }
+        $result = $strs[0];
+        for ($i = 1; $i < count($strs); $i++) {
+            $str = $strs[$i];
+            while (substr($str, 0, strlen($result)) != $result && strlen($result) > 0)
+                $result = substr($result, 0, strlen($result) - 1);
         }
-        return $counter;
+        return $result;
+    
        
     }
 }
