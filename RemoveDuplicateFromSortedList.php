@@ -11,22 +11,26 @@
  *     }
  * }
  */
-class Solution {
+class Solution
+{
 
     /**
      * @param ListNode $head
      * @return ListNode
      */
-    function deleteDuplicates($head) {
-        $check = '';
-        foreach($head as $key => $h){
-            if($check == $h){
-            unset($key);
+    function deleteDuplicates($head)
+    {
+        $newHead = $head;
+
+        while ($head != null) {
+            if ($head->next->val === $head->val) {
+                $head->next = $head->next->next;
+            } else {
+                $head = $head->next;
             }
-            $check = $h;
         }
-        $values = array_values($head);
-        return $values;
+
+        return $newHead;
     }
 }
 //https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/
