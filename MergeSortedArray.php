@@ -10,9 +10,9 @@ class Solution {
      * @return NULL
      */
     function merge(&$nums1, $m, $nums2, $n) {
-        if($m + $n ==1){
-            return $nums1;
-        }
+        array_splice($nums1,$m,$n,$nums2);
+        return sort($nums1);
+
     }
 }
 
