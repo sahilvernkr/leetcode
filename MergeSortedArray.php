@@ -15,5 +15,4 @@ class Solution {
     }
 }
 
-
 //https://leetcode.com/problems/merge-sorted-array/
