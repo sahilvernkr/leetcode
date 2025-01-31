@@ -1,7 +1,6 @@
 <?php
 
 class Solution {
-
     /**
      * @param Integer[] $nums1
      * @param Integer $m
