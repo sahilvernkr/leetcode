@@ -12,4 +12,5 @@ class Solution
   }
 }
 
+
 //https://leetcode.com/problems/plus-one/
