@@ -37,4 +37,24 @@ class Solution {
 }
 }
 
+//solution 3
+class Solution {
+
+    /**
+     * @param Integer[] $nums
+     * @return Boolean
+     */
+    function containsDuplicate($nums) {
+     $hash = [];
+     foreach($nums as $num){
+        if(in_array($num, $hash)){
+            return true;
+        }
+        $hash[] = $num;
+     }
+
+     return false;
+}
+}
+
 //https://leetcode.com/problems/contains-duplicate/
